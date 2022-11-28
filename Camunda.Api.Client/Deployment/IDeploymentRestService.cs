@@ -12,6 +12,9 @@ namespace Camunda.Api.Client.Deployment
 
         [Get("/deployment/count")]
         Task<CountResult> GetListCount(QueryDictionary query);
+        
+        [Get("deployment/registered")]
+        Task<List<string>> GetRegisteredIds();
 
         [Get("/deployment/{id}")]
         Task<DeploymentInfo> Get(string id);
